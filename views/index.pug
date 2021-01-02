@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+  head
+    title #{title}
+  body   
+    h1 #{title}
+    ul
+      each message in messages
+        li
+          p= message.text
+          p= message.user
+          p= message.added
