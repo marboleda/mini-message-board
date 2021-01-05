@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+  head
+    title #{'New Message'}
+  body   
+    form(action='/new' method='POST')
+      label(for='name') Enter your name:
+      input(type='text' name='name' id='name')
+      label(for='message') Message:
+      textarea(id='message')
