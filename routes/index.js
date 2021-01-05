@@ -23,4 +23,19 @@ router.get('/new', function(req, res, next) {
   res.render('form', {});
 });
 
+router.post('/new', function(req, res) {
+  /* Fields from form are inside the body object of the req variable.
+   * They are accessible via the name attribute of the input fields, e.g. req.body.name
+   */
+  const name = req.body.name;
+  const message = req.body.message;
+
+  messages.push({text: message, 
+                 user: name, 
+                 added: new Date()});
+
+  // Redirects users back to index page after submitting a new message
+  res.redirect('/');
+});
+
 module.exports = router;
