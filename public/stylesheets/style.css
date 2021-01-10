@@ -29,3 +29,11 @@ form button {
   width: 50%;
   margin: 2vh auto;
 }
+
+.user {
+  font-weight: bold;
+}
+
+.date {
+  font-style: italic;
+}
