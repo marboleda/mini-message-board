@@ -9,6 +9,6 @@ html(lang='en')
       each message in messages
         li
           p= message.text
-          p #[span(class='user') #{message.user}]
+          p by: #[span(class='user') #{message.user}]
           p #[span(class='date') #{message.added.toDateString()}]
     a(href='/new') New Message
