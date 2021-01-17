@@ -10,5 +10,5 @@ html(lang='en')
         li
           p= message.text
           p #[span(class='user') #{message.user}]
-          p #[span(class='date') #{message.added}]
+          p #[span(class='date') #{message.added.toDateString()}]
     a(href='/new') New Message
